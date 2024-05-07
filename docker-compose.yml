@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  minetest:
+    build: .
+    container_name: 'minetest'
+    restart: 'always'
+    ports:
+      - "30000:30000/udp"
+    volumes:
+      - ./data:/root/.minetest
