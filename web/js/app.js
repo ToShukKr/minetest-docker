@@ -1,5 +1,5 @@
 /**
- * Cubely Minecraft Server Network - Interactive JavaScript Core
+ * Cubely Luanti Server Network - Interactive JavaScript Core
  */
 
 document.addEventListener('DOMContentLoaded', () => {
