@@ -280,45 +280,47 @@ h1, h2, h3, h4, h5, h6 {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
-.btn-header-ip {
-  display: inline-flex;
+.header-social-icon-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  border: none;
+  display: flex;
   align-items: center;
-  gap: 10px;
-  background: rgba(16, 185, 129, 0.12);
-  border: 1px solid rgba(16, 185, 129, 0.4);
-  padding: 10px 20px;
-  border-radius: 12px;
-  color: #ffffff;
-  font-size: 0.9rem;
-  font-weight: 700;
-  cursor: pointer;
+  justify-content: center;
+  text-decoration: none;
   transition: all var(--transition-normal);
   backdrop-filter: blur(8px);
 }
 
-.btn-header-ip:hover {
-  background: rgba(16, 185, 129, 0.25);
-  border-color: var(--accent-emerald);
-  box-shadow: 0 0 20px var(--accent-emerald-glow);
-  transform: translateY(-2px);
+.header-social-icon-btn img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.35));
+  transition: transform var(--transition-fast);
 }
 
-.btn-header-ip .status-dot {
-  width: 8px;
-  height: 8px;
-  background-color: var(--accent-emerald);
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--accent-emerald);
-  animation: pulse-green 2s infinite;
+.header-social-icon-btn:hover {
+  transform: translateY(-3px) scale(1.08);
 }
 
-@keyframes pulse-green {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+.header-social-icon-btn.discord:hover {
+  background: rgba(88, 101, 242, 0.3);
+  box-shadow: 0 0 25px rgba(88, 101, 242, 0.55);
+}
+
+.header-social-icon-btn.telegram:hover {
+  background: rgba(36, 161, 222, 0.3);
+  box-shadow: 0 0 25px rgba(36, 161, 222, 0.55);
+}
+
+.header-social-icon-btn:hover img {
+  transform: scale(1.15) rotate(-5deg);
 }
 
 .mobile-nav-toggle {
@@ -1032,24 +1034,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-link {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-light);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-main);
   text-decoration: none;
   transition: all var(--transition-fast);
 }
 
+.social-link img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
+}
+
 .social-link:hover {
-  background: var(--accent-emerald);
-  color: #000;
-  border-color: var(--accent-emerald);
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.08);
+}
+
+.social-link.discord:hover {
+  background: rgba(88, 101, 242, 0.3);
+  box-shadow: 0 0 25px rgba(88, 101, 242, 0.55);
+}
+
+.social-link.telegram:hover {
+  background: rgba(36, 161, 222, 0.3);
+  box-shadow: 0 0 25px rgba(36, 161, 222, 0.55);
+}
+
+.social-link:hover img {
+  transform: scale(1.15);
 }
 
 .footer-col h4 {
@@ -1259,3 +1278,5 @@ h1, h2, h3, h4, h5, h6 {
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
 }
+
+
